@@ -1,29 +1,17 @@
 package wj.com.moham.common.model;
 
+import android.databinding.BaseObservable;
+import android.databinding.Bindable;
 import android.graphics.Bitmap;
 
 import java.util.List;
 
-/**
- * Created by user on 2017-12-11.
- */
-
-public class RoomData {
-    private String roomId;
+public class RoomData extends BaseObservable {
     private String roomTitle;
-    private List   roomUser;
-    private int    roomNowNum;
-    private int    roomMaxNum;
+    private String roomRecentDate;
+    private String roomPersonNum;
     private String roomImageUrl;
-    private String roomDate;
-
-    public String getRoomId() {
-        return roomId;
-    }
-
-    public void setRoomId(String roomId) {
-        this.roomId = roomId;
-    }
+    private List<String> roomItemList;
 
     public String getRoomTitle() {
         return roomTitle;
@@ -33,28 +21,20 @@ public class RoomData {
         this.roomTitle = roomTitle;
     }
 
-    public List getRoomUser() {
-        return roomUser;
+    public String getRoomRecentDate() {
+        return roomRecentDate;
     }
 
-    public void setRoomUser(List roomUser) {
-        this.roomUser = roomUser;
+    public void setRoomRecentDate(String roomRecentDate) {
+        this.roomRecentDate = roomRecentDate;
     }
 
-    public int getRoomNowNum() {
-        return roomNowNum;
+    public String getRoomPersonNum() {
+        return roomPersonNum;
     }
 
-    public void setRoomNowNum(int roomNowNum) {
-        this.roomNowNum = roomNowNum;
-    }
-
-    public int getRoomMaxNum() {
-        return roomMaxNum;
-    }
-
-    public void setRoomMaxNum(int roomMaxNum) {
-        this.roomMaxNum = roomMaxNum;
+    public void setRoomPersonNum(String roomPersonNum) {
+        this.roomPersonNum = roomPersonNum;
     }
 
     public String getRoomImageUrl() {
@@ -65,11 +45,11 @@ public class RoomData {
         this.roomImageUrl = roomImageUrl;
     }
 
-    public String getRoomDate() {
-        return roomDate;
+    public List<String> getRoomItemList() {
+        return roomItemList;
     }
 
-    public void setRoomDate(String roomDate) {
-        this.roomDate = roomDate;
+    public void setRoomItemList(List<String> roomItemList) {
+        this.roomItemList = roomItemList;
     }
 }

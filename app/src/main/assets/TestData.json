@@ -5,21 +5,30 @@
         "nowPersonNum" : 3,
         "maxPersonNum": 6,
         "lastModifyDate":"17.12.03",
-        "imageUrl": "https://firebasestorage.googleapis.com/v0/b/moham-01.appspot.com/o/test1.png?alt=media&token=09c5ef51-aea5-4f12-80f3-4e127207f167"
+        "imageUrl": "https://firebasestorage.googleapis.com/v0/b/moham-01.appspot.com/o/test1.png?alt=media&token=09c5ef51-aea5-4f12-80f3-4e127207f167",
+        "itemId":[
+          "a1", "a2", "a3"
+        ]
       },
       "zxcv1234": {
         "title": "테스트타이틀2",
         "nowPersonNum" : 1,
         "maxPersonNum": 9,
         "lastModifyDate":"17.12.05",
-        "imageUrl": "https://firebasestorage.googleapis.com/v0/b/moham-01.appspot.com/o/test2.jpg?alt=media&token=29d98412-3db5-47ec-9f4e-b64b91fa6f47"
+        "imageUrl": "https://firebasestorage.googleapis.com/v0/b/moham-01.appspot.com/o/test2.jpg?alt=media&token=29d98412-3db5-47ec-9f4e-b64b91fa6f47",
+        "itemId":[
+          "z1", "z2", "z3"
+        ]
       },
       "qwer1234": {
-        "title": "테스트타이틀3",
+        "title": "테스트타이틀333333",
         "nowPersonNum" : 1,
         "maxPersonNum": 10,
         "lastModifyDate":"17.12.14",
-        "imageUrl": ""
+        "imageUrl": "",
+        "itemId":[
+          "q1", "q2", "q3"
+        ]
       }
     },
     "User": {

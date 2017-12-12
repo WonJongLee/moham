@@ -22,7 +22,7 @@ import java.util.List;
 import wj.com.moham.R;
 import wj.com.moham.adapter.PlanCardAdapter;
 import wj.com.moham.common.data.Const;
-import wj.com.moham.common.model.CardRoomData;
+import wj.com.moham.common.model.RoomData;
 import wj.com.moham.common.util.Util;
 
 public class PlanListFragment extends Fragment {
@@ -71,20 +71,20 @@ public class PlanListFragment extends Fragment {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 List<String> roomList = (ArrayList) dataSnapshot.child(Const.FIREBASE_KEY_USER).child(uId).getValue();
-                List<CardRoomData> cardList = new ArrayList<>();
+                List<RoomData> cardList = new ArrayList<>();
 
                 for (int i = 0; i < roomList.size(); i++) {
                     String key = roomList.get(i);
-                    CardRoomData crData = new CardRoomData();
+                    RoomData crData = new RoomData();
 
-//                    try {
-                        crData.setCardRoomImageUrl(dataSnapshot.child(Const.FIREBASE_KEY_ROOM).child(key).child(Const.FIREBASE_KEY_ROOM_IMAGE_URL).getValue().toString());
-//                    } catch (Exception e) {
-//                        crData.setCardRoomImageUrl("");
-//                    }
-                    crData.setCardRoomTitle(dataSnapshot.child(Const.FIREBASE_KEY_ROOM).child(key).child(Const.FIREBASE_KEY_ROOM_TITLE).getValue().toString());
-                    crData.setCardRoomRecentDate(dataSnapshot.child(Const.FIREBASE_KEY_ROOM).child(key).child(Const.FIREBASE_KEY_ROOM_LAST_MODIFY_DATE).getValue().toString());
-                    crData.setCardRoomPersonNum(dataSnapshot.child(Const.FIREBASE_KEY_ROOM).child(key).child(Const.FIREBASE_KEY_ROOM_NOW_PERSON_NUM).getValue().toString()
+                    try {
+                        crData.setRoomImageUrl(dataSnapshot.child(Const.FIREBASE_KEY_ROOM).child(key).child(Const.FIREBASE_KEY_ROOM_IMAGE_URL).getValue().toString());
+                    } catch (Exception e) {
+                        crData.setRoomImageUrl("");
+                    }
+                    crData.setRoomTitle(dataSnapshot.child(Const.FIREBASE_KEY_ROOM).child(key).child(Const.FIREBASE_KEY_ROOM_TITLE).getValue().toString());
+                    crData.setRoomRecentDate(dataSnapshot.child(Const.FIREBASE_KEY_ROOM).child(key).child(Const.FIREBASE_KEY_ROOM_LAST_MODIFY_DATE).getValue().toString());
+                    crData.setRoomPersonNum(dataSnapshot.child(Const.FIREBASE_KEY_ROOM).child(key).child(Const.FIREBASE_KEY_ROOM_NOW_PERSON_NUM).getValue().toString()
                             + "/"
                             + dataSnapshot.child(Const.FIREBASE_KEY_ROOM).child(key).child(Const.FIREBASE_KEY_ROOM_MAX_PERSON_NUM).getValue().toString()
                     );
@@ -99,6 +99,5 @@ public class PlanListFragment extends Fragment {
 
             }
         });
-
     }
 }

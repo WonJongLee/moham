@@ -89,9 +89,8 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.Ui
                     dialog.cancel();
                 }
             });
-            alertDialog.showAlertDialog(LoginActivity.this, getString(R.string.signup), "회원가입 하시겠습니까?");
+            alertDialog.showAlertDialog(LoginActivity.this, getString(R.string.signup), getString(R.string.msg_signup_request));
         }
-
     }
 
     @Override

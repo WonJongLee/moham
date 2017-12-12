@@ -5,8 +5,8 @@
 
     <data>
         <variable
-            name="crData"
-            type="wj.com.moham.common.model.CardRoomData">
+            name="rData"
+            type="wj.com.moham.common.model.RoomData">
         </variable>
     </data>
 
@@ -35,7 +35,7 @@
                     android:layout_margin="15dp"
                     android:layout_gravity="center_vertical"
                     bind:error="@{@drawable/img_no_pic}"
-                    bind:imageUrl="@{crData.cardRoomImageUrl}">
+                    bind:imageUrl="@{rData.roomImageUrl}">
                 </ImageView>
 
                 <RelativeLayout
@@ -55,7 +55,7 @@
                         android:layout_toStartOf="@+id/txt_recent_date_item"
                         android:ellipsize="end"
                         android:maxLines="2"
-                        android:text="@{crData.cardRoomTitle}"
+                        android:text="@{rData.roomTitle}"
                         android:textColor="@color/mono_0"
                         android:textSize="20dp">
                     </TextView>
@@ -69,7 +69,7 @@
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentTop="true"
-                        android:text="@{crData.cardRoomRecentDate}">
+                        android:text="@{rData.roomRecentDate}">
                     </TextView>
 
                     <TextView
@@ -80,7 +80,7 @@
                         android:layout_alignParentBottom="true"
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentRight="true"
-                        android:text="@{crData.cardRoomPersonNum}">
+                        android:text="@{rData.roomPersonNum}">
                     </TextView>
                 </RelativeLayout>
             </LinearLayout>
