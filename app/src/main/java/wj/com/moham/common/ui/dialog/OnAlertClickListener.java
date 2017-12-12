@@ -1,4 +1,4 @@
-package wj.com.moham.common.model.ui.dialog;
+package wj.com.moham.common.ui.dialog;
 
 import android.content.DialogInterface;
 

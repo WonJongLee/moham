@@ -45,7 +45,6 @@ public abstract class BaseRecyclerViewAdapter<T, H extends RecyclerView.ViewHold
         if (arrayList == null)
             return null;
 
-
         return arrayList.get(position);
     }
 
@@ -69,8 +68,6 @@ public abstract class BaseRecyclerViewAdapter<T, H extends RecyclerView.ViewHold
         }
 
         notifyDataSetChanged();
-
-
     }
 
     public void clearItems() {
@@ -79,8 +76,6 @@ public abstract class BaseRecyclerViewAdapter<T, H extends RecyclerView.ViewHold
             arrayList.clear();
             notifyDataSetChanged();
         }
-
-
     }
 
     @Override

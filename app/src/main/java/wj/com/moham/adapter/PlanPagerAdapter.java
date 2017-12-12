@@ -6,10 +6,6 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 import java.util.List;
 
-/**
- * Created by admin on 2017. 12. 7..
- */
-
 public class PlanPagerAdapter extends FragmentPagerAdapter {
     private List<Fragment> listFragment;
 

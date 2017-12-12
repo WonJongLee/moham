@@ -1,20 +1,38 @@
-{
-  "Room" : {
-    "asdf1234" : {
-      "title" : "테스트타이틀",
-      "maxPersonNum" : 6,
-      "user" : [
-        "moham1", "moham2", "moham3"
-      ],
-      "image" : ""
+  {
+    "Room": {
+      "asdf1234": {
+        "title": "테스트타이틀테스트타이틀테스트타이틀테스트타이틀테스트타이틀",
+        "nowPersonNum" : 3,
+        "maxPersonNum": 6,
+        "lastModifyDate":"17.12.03",
+        "imageUrl": "https://firebasestorage.googleapis.com/v0/b/moham-01.appspot.com/o/test1.png?alt=media&token=09c5ef51-aea5-4f12-80f3-4e127207f167"
+      },
+      "zxcv1234": {
+        "title": "테스트타이틀2",
+        "nowPersonNum" : 1,
+        "maxPersonNum": 9,
+        "lastModifyDate":"17.12.05",
+        "imageUrl": "https://firebasestorage.googleapis.com/v0/b/moham-01.appspot.com/o/test2.jpg?alt=media&token=29d98412-3db5-47ec-9f4e-b64b91fa6f47"
+      },
+      "qwer1234": {
+        "title": "테스트타이틀3",
+        "nowPersonNum" : 1,
+        "maxPersonNum": 10,
+        "lastModifyDate":"17.12.14",
+        "imageUrl": ""
+      }
     },
-    "zxcv1234" : {
-      "title" : "테스트타이틀2",
-      "maxPersonNum" : 9,
-      "user" : [
-        "moham11", "moham12", "moham13", "moham14", "moham15", "moham16"
+    "User": {
+      "xA9r3ewLcxPiejql6smkV5ehEbL2": [
+        "asdf1234",
+        "zxcv1234"
       ],
-      "image" : ""
+      "IEmRZzUQd7VxLaWDscHw6Oq9byf1": [
+        "qwer1234",
+        "asdf1234"
+      ],
+      "E72K3SmZyYdEjyQmYtfC2rF6SVs1": [
+        "asdf1234"
+      ]
     }
   }
-}

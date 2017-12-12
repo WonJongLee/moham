@@ -17,14 +17,14 @@ import com.google.firebase.auth.FirebaseUser;
 
 import wj.com.moham.R;
 import wj.com.moham.common.data.Const;
-import wj.com.moham.databinding.ActivityLoginBinding;
 import wj.com.moham.common.model.LoginData;
+import wj.com.moham.common.ui.dialog.DialogMoham;
+import wj.com.moham.common.ui.dialog.OnAlertClickListener;
+import wj.com.moham.common.ui.dialog.OnConfirmClickListener;
+import wj.com.moham.common.util.StrUtil;
+import wj.com.moham.databinding.ActivityLoginBinding;
 import wj.com.moham.presenter.LoginContract;
 import wj.com.moham.presenter.LoginPresenter;
-import wj.com.moham.common.model.ui.dialog.DialogMoham;
-import wj.com.moham.common.model.ui.dialog.OnAlertClickListener;
-import wj.com.moham.common.model.ui.dialog.OnConfirmClickListener;
-import wj.com.moham.common.util.StrUtil;
 
 public class LoginActivity extends AppCompatActivity implements LoginContract.Ui {
 

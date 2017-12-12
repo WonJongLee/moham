@@ -13,7 +13,6 @@ import wj.com.moham.R;
 import wj.com.moham.adapter.PlanPagerAdapter;
 import wj.com.moham.fragment.PlanCalendarFragment;
 import wj.com.moham.fragment.PlanListFragment;
-import wj.com.moham.common.util.Util;
 
 public class PlanActivity extends FragmentActivity {
 

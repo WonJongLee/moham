@@ -4,9 +4,10 @@
     <color name="colorPrimaryDark">#666666</color>
     <color name="colorAccent">#E63434</color>
 
-    <color name="header_bg">#AAE6E0E0</color>
+    <color name="header_bg">#AAE6D0D0</color>
 
     <color name="background_color">#FAFAFA</color>
+
     <color name="err_red">#E63434</color>
 
     <color name="mono_0">#000000</color>
@@ -21,8 +22,8 @@
     <color name="mono_bf">#BFBFBF</color>
 
     <!-- Button -->
-    <color name="btn_red_nor_bg">#E6E0E0</color>
-    <color name="btn_red_pre_bg">#E6C0C0</color>
+    <color name="btn_red_nor_bg">#E6DDDD</color>
+    <color name="btn_red_pre_bg">#E6BBBB</color>
     <color name="btn_gray_nor_bg">#E0E0E0</color>
     <color name="btn_gray_pre_bg">#C0C0C0</color>
 </resources>

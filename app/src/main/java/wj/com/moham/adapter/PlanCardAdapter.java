@@ -20,7 +20,7 @@ public class PlanCardAdapter extends BaseRecyclerViewAdapter<CardRoomData, PlanC
         super(context);
     }
 
-    public PlanCardAdapter(Context context, List<CardRoomData> arrayList) {
+    public PlanCardAdapter(Context context, List<CardRoomData > arrayList) {
         super(context, arrayList);
     }
 
@@ -32,10 +32,24 @@ public class PlanCardAdapter extends BaseRecyclerViewAdapter<CardRoomData, PlanC
     }
 
     @Override
-    public void onBindView(PlanCardViewHolder holder, int position) {
+    public void onBindView(final PlanCardViewHolder holder, final int position) {
 
         CardRoomData crData = getItem(position);
         holder.binding.setCrData(crData);
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+        holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                return false;
+            }
+        });
     }
 
     class PlanCardViewHolder extends RecyclerView.ViewHolder {

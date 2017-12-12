@@ -14,7 +14,7 @@ public class RoomData {
     private List   roomUser;
     private int    roomNowNum;
     private int    roomMaxNum;
-    private Bitmap roomImage;
+    private String roomImageUrl;
     private String roomDate;
 
     public String getRoomId() {
@@ -57,12 +57,12 @@ public class RoomData {
         this.roomMaxNum = roomMaxNum;
     }
 
-    public Bitmap getRoomImage() {
-        return roomImage;
+    public String getRoomImageUrl() {
+        return roomImageUrl;
     }
 
-    public void setRoomImage(Bitmap roomImage) {
-        this.roomImage = roomImage;
+    public void setRoomImageUrl(String roomImageUrl) {
+        this.roomImageUrl = roomImageUrl;
     }
 
     public String getRoomDate() {
