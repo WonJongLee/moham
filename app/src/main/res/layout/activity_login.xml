@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="loginData"
+            type="wj.com.moham.common.model.LoginData">
+        </variable>
+
+        <variable
+            name="loginPre"
+            type="wj.com.moham.presenter.LoginContract.Presenter">
+        </variable>
+    </data>
+
+    <LinearLayout
+        android:id="@+id/layout_top_login"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:background="@color/background_color"
+        android:onClick="@{() -> loginPre.onTopLayoutClickEvent()}">
+
+        <include
+            layout="@layout/header"
+            android:layout_height="@dimen/height_header"
+            android:layout_width="match_parent">
+        </include>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/mono_8">
+        </View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/activity_padding"
+            android:orientation="vertical">
+
+            <wj.com.moham.common.model.ui.edit.EditMoham
+                android:id="@+id/edit_id_login"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_edit"
+                android:hint="@string/id"
+                android:inputType="text"
+                android:text="@={loginData.id}">
+            </wj.com.moham.common.model.ui.edit.EditMoham>
+
+            <wj.com.moham.common.model.ui.edit.EditMoham
+                android:id="@+id/edit_pw_login"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_edit"
+                android:layout_marginTop="12dp"
+                android:hint="@string/pw"
+                android:inputType="textPassword"
+                android:text="@={loginData.pw}">
+            </wj.com.moham.common.model.ui.edit.EditMoham>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
+
+                <Button
+                    android:background="@drawable/btn_gray_bg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/height_btn"
+                    android:layout_weight="1"
+                    android:text="@string/signup"
+                    android:textAppearance="@style/BtnTxtStyle"
+                    android:onClick="@{() -> loginPre.onSignUpBtnClickEvent(loginData)}">
+                </Button>
+
+                <Button
+                    android:background="@drawable/btn_red_bg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/height_btn"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="@string/login"
+                    android:textAppearance="@style/BtnTxtStyle"
+                    android:onClick="@{() -> loginPre.onLoginBtnClickEvent(loginData)}">
+                </Button>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

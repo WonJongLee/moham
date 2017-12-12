@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">모두함께</string>
+
+    <string name="id">아이디</string>
+    <string name="pw">비밀번호</string>
+
+    <string name="ok">확인</string>
+    <string name="cancel">취소</string>
+
+    <string name="login">로그인</string>
+    <string name="signup">회원가입</string>
+
+    <!-- Message -->
+    <string name="msg_login_success">로그인에 성공하였습니다.</string>
+    <string name="msg_login_fail">로그인에 실패하였습니다.</string>
+    <string name="msg_login_notice">아이디와 비밀번호를 확인해주세요.</string>
+    <string name="msg_signup_success">회원가입이 완료되었습니다.</string>
+    <string name="msg_signup_fail">아이디와 비밀번호를 입력하고, 회원가입 버튼을 누르면 회원가입이 완료됩니다.\n\n아이디와 비밀번호를 입력해주세요.</string>
+</resources>

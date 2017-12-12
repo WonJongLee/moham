@@ -1,0 +1,20 @@
+{
+  "Room" : {
+    "asdf1234" : {
+      "title" : "테스트타이틀",
+      "maxPersonNum" : 6,
+      "user" : [
+        "moham1", "moham2", "moham3"
+      ],
+      "image" : ""
+    },
+    "zxcv1234" : {
+      "title" : "테스트타이틀2",
+      "maxPersonNum" : 9,
+      "user" : [
+        "moham11", "moham12", "moham13", "moham14", "moham15", "moham16"
+      ],
+      "image" : ""
+    }
+  }
+}

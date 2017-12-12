@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="wj.com.moham.activity.PlanActivity">
+
+    <include
+        android:id="@+id/header_plan"
+        layout="@layout/header">
+    </include>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tab_layout_plan"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_header"
+        android:background="@color/header_bg"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/header_plan"
+        app:tabIndicatorColor="@color/mono_8"
+        app:tabIndicatorHeight="1dp"
+        app:tabTextColor="@color/mono_8"
+        app:tabSelectedTextColor="@color/mono_0">
+
+        <android.support.design.widget.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="탭1">
+        </android.support.design.widget.TabItem>
+
+        <android.support.design.widget.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="탭2">
+        </android.support.design.widget.TabItem>
+    </android.support.design.widget.TabLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager_plan"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/tab_layout_plan">
+    </android.support.v4.view.ViewPager>
+</RelativeLayout>
