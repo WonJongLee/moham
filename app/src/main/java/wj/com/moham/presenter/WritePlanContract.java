@@ -9,8 +9,8 @@ import wj.com.moham.common.model.RoomData;
 public interface WritePlanContract {
     interface Presenter extends BaseContract.Presenter{
         void onTopLayoutClick();
-
         void onConfirmBtnClick(RoomData rData);
+        void onImageViewClick();
     }
 
     interface Ui extends BaseContract.Ui{

@@ -109,7 +109,7 @@ public class PlanListFragment extends Fragment {
 
     private void goWritePlanAct() {
         startActivity(new Intent(getActivity(), WritePlanActivity.class));
-        getActivity().overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);
+        getActivity().overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_right);
         getActivity().finish();
     }
 }

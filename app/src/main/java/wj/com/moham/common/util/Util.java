@@ -32,11 +32,19 @@ public class Util {
         act.finish();
     }
 
+    /*
+     * param : email (email form)
+     * return : email.substring(0, email.indexOf("@"))
+     */
     public static String extractEmail(String email) {
         if (StrUtil.isNull(email)) {
             return "";
         } else {
-            return email.substring(0, email.indexOf("@"));
+            if (email.indexOf("@") < 1) {
+                return email;
+            } else {
+                return email.substring(0, email.indexOf("@"));
+            }
         }
     }
 }

@@ -52,7 +52,8 @@
             android:layout_height="@dimen/height_btn"
             android:layout_marginTop="12dp"
             android:text="@string/cancel"
-            android:textAppearance="@style/BtnTxtStyle">
+            android:textAppearance="@style/BtnTxtStyle"
+            style="?android:attr/borderlessButtonStyle">
         </Button>
 
         <Button
@@ -63,7 +64,8 @@
             android:layout_height="@dimen/height_btn"
             android:layout_marginTop="12dp"
             android:text="@string/ok"
-            android:textAppearance="@style/BtnTxtStyle">
+            android:textAppearance="@style/BtnTxtStyle"
+            style="?android:attr/borderlessButtonStyle">
         </Button>
     </LinearLayout>
 </LinearLayout>

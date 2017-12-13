@@ -38,7 +38,7 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.Ui
         super.onCreate(savedInstanceState);
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_login);
 
-        mLoginPresenter = new LoginPresenter(this, this);
+        mLoginPresenter = new LoginPresenter(this);
         mLoginData = new LoginData();
 
         mBinding.setLoginPre(mLoginPresenter);

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:bind="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
         <variable
@@ -39,8 +39,8 @@
                     android:layout_height="60dp"
                     android:layout_margin="15dp"
                     android:layout_gravity="center_vertical"
-                    bind:error="@{@drawable/img_no_pic}"
-                    bind:imageUrl="@{rData.roomImageUrl}">
+                    tools:error="@{@drawable/img_no_pic}"
+                    tools:imageUrl="@{rData.roomImageUrl}">
                 </ImageView>
 
                 <RelativeLayout

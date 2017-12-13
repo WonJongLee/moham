@@ -11,11 +11,9 @@ import wj.com.moham.common.model.LoginData;
 public class LoginPresenter implements LoginContract.Presenter {
 
     private LoginContract.Ui ui;
-    private Activity ctx;
 
-    public LoginPresenter(LoginContract.Ui ui, Activity ctx) {
+    public LoginPresenter(LoginContract.Ui ui) {
         this.ui = ui;
-        this.ctx = ctx;
     }
 
     @Override

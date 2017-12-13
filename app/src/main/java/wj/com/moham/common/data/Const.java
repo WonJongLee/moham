@@ -15,4 +15,6 @@ public class Const {
     public static final String FIREBASE_KEY_ROOM_LAST_MODIFY_DATE = "lastModifyDate";
 
     public static final String FIREBASE_KEY_USER                  = "User";
+
+    public static final int MSG_REQ_CODE_SELECT_IMAGE             = 1000;
 }
