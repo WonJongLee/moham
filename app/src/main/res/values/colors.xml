@@ -2,13 +2,13 @@
 <resources>
     <color name="colorPrimary">#888888</color>
     <color name="colorPrimaryDark">#666666</color>
-    <color name="colorAccent">#E63434</color>
+    <color name="colorAccent">#80E63434</color>
 
     <color name="header_bg">#AAE6D0D0</color>
 
     <color name="background_color">#FAFAFA</color>
 
-    <color name="err_red">#E63434</color>
+    <color name="err_red">#80E63434</color>
 
     <color name="mono_0">#000000</color>
     <color name="mono_3">#333333</color>

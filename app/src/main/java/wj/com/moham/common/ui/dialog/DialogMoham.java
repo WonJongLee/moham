@@ -21,7 +21,7 @@ import wj.com.moham.common.util.Util;
 
 public class DialogMoham {
 
-    private OnAlertClickListener mOnAlertClickListener;
+    private OnAlertClickListener   mOnAlertClickListener;
     private OnConfirmClickListener mOnConfirmClickListener;
 
     public void showConfirmDialog(Context pContext, String pContent) {

@@ -71,6 +71,7 @@
                     android:layout_weight="1"
                     android:text="@string/signup"
                     android:textAppearance="@style/BtnTxtStyle"
+                    style="?android:attr/borderlessButtonStyle"
                     android:onClick="@{() -> loginPre.onSignUpBtnClickEvent(loginData)}">
                 </Button>
 
@@ -82,6 +83,7 @@
                     android:layout_weight="1"
                     android:text="@string/login"
                     android:textAppearance="@style/BtnTxtStyle"
+                    style="?android:attr/borderlessButtonStyle"
                     android:onClick="@{() -> loginPre.onLoginBtnClickEvent(loginData)}">
                 </Button>
             </LinearLayout>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="rData"
+            type="wj.com.moham.common.model.RoomData">
+        </variable>
+
+        <variable
+            name="wpPre"
+            type="wj.com.moham.presenter.WritePlanContract.Presenter">
+        </variable>
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:background="@color/background_color"
+            tools:context="wj.com.moham.activity.WritePlanActivity">
+
+            <include
+                layout="@layout/header">
+            </include>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/mono_8">
+            </View>
+
+            <ScrollView
+                android:background="@color/mono_f0"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/activity_padding"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginRight="12dp"
+                            android:background="@color/mono_f"
+                            android:src="@drawable/img_no_pic">
+                        </ImageView>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <wj.com.moham.common.model.ui.edit.EditMoham
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/height_edit"
+                                android:hint="@string/title"
+                                android:singleLine="true"
+                                android:text="@={rData.roomTitle}">
+                            </wj.com.moham.common.model.ui.edit.EditMoham>
+
+                            <Spinner
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/height_edit"
+                                android:layout_marginTop="10dp"
+                                android:entries="@array/max_person_num"
+                                android:gravity="center"
+                                android:spinnerMode="dropdown">
+                            </Spinner>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/mono_8">
+                    </View>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/contents_padding"
+                        android:layout_marginLeft="@dimen/activity_padding"
+                        android:layout_marginRight="@dimen/activity_padding"
+                        android:layout_marginBottom="80dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/contents_padding"
+                            android:gravity="center_horizontal"
+                            android:text="@string/write_plan_small_title"
+                            android:textAppearance="@style/MiddleTitleTxtStyle">
+                        </TextView>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <wj.com.moham.common.model.ui.edit.EditMoham
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/height_edit"
+                                android:layout_marginBottom="@dimen/contents_padding"
+                                android:layout_weight="1"
+                                android:singleLine="true">
+                            </wj.com.moham.common.model.ui.edit.EditMoham>
+
+                            <Button
+                                android:background="@drawable/btn_red_bg"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/height_btn"
+                                android:layout_marginLeft="6dp"
+                                android:text="@string/add"
+                                android:textAppearance="@style/BtnTxtStyle"
+                                style="?android:attr/borderlessButtonStyle">
+                            </Button>
+                        </LinearLayout>
+
+
+                        <ListView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                        </ListView>
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/fab_margin"
+            app:srcCompat="@drawable/ic_add_black_24dp"
+            app:backgroundTint="@color/btn_red_nor_bg">
+        </android.support.design.widget.FloatingActionButton>
+    </FrameLayout>
+</layout>

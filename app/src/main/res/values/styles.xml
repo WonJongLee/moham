@@ -16,19 +16,31 @@
     <style name="PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
     <style name="BtnTxtStyle">
-        <item name="android:textSize">16dp</item>
+        <item name="android:textSize">@dimen/size_small_title</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/mono_3</item>
     </style>
 
-    <style name="TitleTxtStyle">
-        <item name="android:textSize">16dp</item>
+    <style name="LargeTitleTxtStyle">
+        <item name="android:textSize">@dimen/size_large_title</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/mono_3</item>
+    </style>
+
+    <style name="MiddleTitleTxtStyle">
+        <item name="android:textSize">@dimen/size_middle_title</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/mono_3</item>
+    </style>
+
+    <style name="SmallTitleTxtStyle">
+        <item name="android:textSize">@dimen/size_small_title</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/mono_3</item>
     </style>
 
     <style name="ContentsTxtStyle">
-        <item name="android:textSize">14dp</item>
+        <item name="android:textSize">@dimen/size_contents</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/mono_3</item>
     </style>

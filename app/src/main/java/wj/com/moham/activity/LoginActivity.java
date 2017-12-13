@@ -62,6 +62,13 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.Ui
     }
 
     @Override
+    public void onBackPressed() {
+        //super.onBackPressed();
+        DialogMoham finishDialog = new DialogMoham();
+        finishDialog.showAlertFinishDialog(LoginActivity.this, getString(R.string.alert) ,getString(R.string.msg_app_finish));
+    }
+
+    @Override
     public void closeKeyboard() {
         InputMethodManager inputMethodManager = (InputMethodManager) this.getSystemService(Context.INPUT_METHOD_SERVICE);
         mBinding.editIdLogin.clearFocus();

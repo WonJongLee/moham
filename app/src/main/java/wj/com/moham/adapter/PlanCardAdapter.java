@@ -16,7 +16,6 @@ import wj.com.moham.databinding.ItemPlanListBinding;
 
 public class PlanCardAdapter extends BaseRecyclerViewAdapter<RoomData, PlanCardAdapter.PlanCardViewHolder> {
 
-
     public PlanCardAdapter(Context context) {
         super(context);
     }

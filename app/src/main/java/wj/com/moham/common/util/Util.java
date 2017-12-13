@@ -31,4 +31,12 @@ public class Util {
         act.startActivity(new Intent(act, LoginActivity.class));
         act.finish();
     }
+
+    public static String extractEmail(String email) {
+        if (StrUtil.isNull(email)) {
+            return "";
+        } else {
+            return email.substring(0, email.indexOf("@"));
+        }
+    }
 }

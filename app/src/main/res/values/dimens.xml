@@ -3,11 +3,16 @@
     <dimen name="activity_padding">20dp</dimen>
     <dimen name="contents_padding">12dp</dimen>
 
-    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="fab_margin">20dp</dimen>
     <dimen name="appbar_padding_top">8dp</dimen>
 
     <dimen name="height_edit">45dp</dimen>
     <dimen name="height_btn">45dp</dimen>
     <dimen name="height_header">45dp</dimen>
+
+    <dimen name="size_large_title">20dp</dimen>
+    <dimen name="size_middle_title">18dp</dimen>
+    <dimen name="size_small_title">16dp</dimen>
+    <dimen name="size_contents">14dp</dimen>
 
 </resources>

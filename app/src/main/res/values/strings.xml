@@ -10,11 +10,34 @@
     <string name="login">로그인</string>
     <string name="signup">회원가입</string>
 
+    <string name="alert">알림</string>
+    <string name="error">오류</string>
+    <string name="add">추가</string>
+
+    <string name="title">제목</string>
+    <string name="content">내용</string>
+
     <!-- Message -->
+    <string name="msg_app_finish">모두함께를 종료하시겠습니까?</string>
+    <string name="msg_network_error">네트워크에 연결할 수 없습니다.\n네트워크 확인 후 다시 실행해주세요.</string>
     <string name="msg_login_success">로그인에 성공하였습니다.</string>
     <string name="msg_login_fail">로그인에 실패하였습니다.</string>
     <string name="msg_login_notice">아이디와 비밀번호를 확인해주세요.</string>
     <string name="msg_signup_request">입력한 아이디와 비밀번호로 회원가입을 하시겠습니까?</string>
     <string name="msg_signup_success">회원가입이 완료되었습니다.</string>
     <string name="msg_signup_fail">아이디와 비밀번호를 입력하고, 회원가입 버튼을 누르면 회원가입이 완료됩니다.\n\n아이디와 비밀번호를 입력해주세요.</string>
+    <string name="msg_write_plan_finish">그룹 등록을 취소하시겠습니까?</string>
+
+    <!-- WritePlan -->
+    <string name="write_plan_small_title">함께할 아이디</string>
+
+    <string-array name="max_person_num">
+        <item>함께할 총인원</item>
+        <item>총인원 : 1명</item>
+        <item>총인원 : 2명</item>
+        <item>총인원 : 3명</item>
+        <item>총인원 : 4명</item>
+        <item>총인원 : 5명</item>
+        <item>총인원 : 6명</item>
+    </string-array>
 </resources>

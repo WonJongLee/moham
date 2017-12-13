@@ -1,15 +1,18 @@
 package wj.com.moham.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -20,28 +23,31 @@ import java.util.ArrayList;
 import java.util.List;
 
 import wj.com.moham.R;
+import wj.com.moham.activity.WritePlanActivity;
 import wj.com.moham.adapter.PlanCardAdapter;
 import wj.com.moham.common.data.Const;
 import wj.com.moham.common.model.RoomData;
+import wj.com.moham.common.ui.dialog.DialogMoham;
 import wj.com.moham.common.util.Util;
 
 public class PlanListFragment extends Fragment {
+    private ViewGroup mRootView;
 
     private RecyclerView mRecyclerPlanList;
     private FloatingActionButton mFabPlanList;
-
     private DatabaseReference mDatabase;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        ViewGroup rootView = (ViewGroup) inflater.inflate(
+        mRootView = (ViewGroup) inflater.inflate(
                 R.layout.fragment_plan_list, container, false);
 
-        init(rootView);
+        init(mRootView);
 
-        return rootView;
+        return mRootView;
     }
+
 
     private void init(View view) {
         mDatabase = FirebaseDatabase.getInstance().getReference();
@@ -57,7 +63,7 @@ public class PlanListFragment extends Fragment {
         mFabPlanList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Util.doSignOut(getActivity());
+                goWritePlanAct();
             }
         });
         mRecyclerPlanList.setLayoutManager(new LinearLayoutManager(view.getContext(), LinearLayoutManager.VERTICAL, false));
@@ -65,7 +71,7 @@ public class PlanListFragment extends Fragment {
     }
 
     private void getFirebaseDatabase(final View view) {
-        final String uId = FirebaseAuth.getInstance().getCurrentUser().getUid();
+        final String uId = Util.extractEmail(FirebaseAuth.getInstance().getCurrentUser().getEmail());
 
         mDatabase.addValueEventListener(new ValueEventListener() {
             @Override
@@ -96,8 +102,14 @@ public class PlanListFragment extends Fragment {
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
-
+                new DialogMoham().showConfirmFinishDialog(getActivity(), getString(R.string.error), getString(R.string.msg_network_error));
             }
         });
+    }
+
+    private void goWritePlanAct() {
+        startActivity(new Intent(getActivity(), WritePlanActivity.class));
+        getActivity().overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);
+        getActivity().finish();
     }
 }
